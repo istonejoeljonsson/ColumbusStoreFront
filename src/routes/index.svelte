@@ -5,7 +5,7 @@
     let catInput;
     let isLoading = false;
 
-    //! 2nd alt is to use shortcut ins svelte instead of onMount
+    //! 2nd alt is to use shortcut in svelte instead of onMount
     onMount(() => {
         //! Get kitties on initial load
         isLoading = true;

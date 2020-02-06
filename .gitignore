@@ -4,3 +4,6 @@
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/ColumbusStoreFront/v16/.suo

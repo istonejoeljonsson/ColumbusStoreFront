@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "columbusstorefront",
+  "description": "A Svelte Storefront for Columbus",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -36,6 +36,7 @@
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
     "svelte-preprocess": "^3.3.0",
-    "tailwindcss": "^1.2.0-canary.5"
+    "tailwindcss": "^1.2.0-canary.5",
+    "tailwindcss-pseudo-elements": "^1.1.2"
   }
 }

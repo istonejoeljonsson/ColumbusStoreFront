@@ -23,6 +23,7 @@ devDependencies:
   svelte: 3.18.1
   svelte-preprocess: 3.3.1_svelte@3.18.1
   tailwindcss: 1.2.0-canary.5
+  tailwindcss-pseudo-elements: 1.1.2
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.8.3:
@@ -2275,6 +2276,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-jl6VLGTytOjHu700LuXSX6LvwRKFLAxqT8McUD2f3NjMI6qakWXgXoVjT+/ZmXmr8DiwrN/074pA1o3Aye4bIA==
+  /tailwindcss-pseudo-elements/1.1.2:
+    dev: true
+    resolution:
+      integrity: sha512-7FqIQGYWFQYFFbDldRbKPjW9aMDO2B2kB3GDn5Qm9wCvdDxfZSp/0g5Qw98SpfSe4XI5QtuVHJ2KQCJq7InKVA==
   /tailwindcss/1.2.0-canary.5:
     dependencies:
       autoprefixer: 9.7.4
@@ -2429,3 +2434,4 @@ specifiers:
   svelte: ^3.0.0
   svelte-preprocess: ^3.3.0
   tailwindcss: ^1.2.0-canary.5
+  tailwindcss-pseudo-elements: ^1.1.2

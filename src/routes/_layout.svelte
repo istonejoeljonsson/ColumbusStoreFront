@@ -6,15 +6,31 @@
 </script>
 
 <style>
-	main {
-		@apply relative max-w-4xl bg-white p-8 mx-auto my-0 box-border;
+	:global(#sapper){
+		@apply flex flex-col h-full;
 	}
+	main {
+		@apply flex w-full flex-auto mx-auto justify-center;
+	}
+	header{
+		@apply flex-initial flex w-full p-0 justify-center mx-auto bg-yellow-100 border-b border-solid border-black;
+	}
+	footer{
+		@apply mt-4 flex-initial;
+	}
+
 </style>
 
 <Tailwindcss />
 
-<Nav {segment}/>
+<header>
+	<Nav {segment}/>
+</header>
 
 <main>
-	<slot></slot>
+		<slot></slot>
 </main>
+
+<footer>
+	my footer
+</footer>

@@ -13,7 +13,6 @@
 	let uniqueBlocks = blocks.map(block => block.type)
 	uniqueBlocks = new Set(uniqueBlocks);
 	uniqueBlocks = [...uniqueBlocks];
-  import('../../components/blocks/Slider.svelte').then(res => loadedBlockTypes = [...loadedBlockTypes, res.default])
 
 	uniqueBlocks.forEach(block => {
 		if(block === 'Slider') {
@@ -23,7 +22,6 @@
     	import('../../components/blocks/Grid.svelte').then(res => loadedBlockTypes = [...loadedBlockTypes, res.default])
 		}
 	});																								
-
 
 	$: blocksToRender = blocks.filter(block => loadedBlockTypes.some(vendor => {
 			return  vendor.name === block.type

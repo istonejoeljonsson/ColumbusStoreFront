@@ -1,31 +1,15 @@
 <script context="module">
 	export async function preload({ params, query }) {
-		return this.fetch(`blockpage.json`).then(r => r.json()).then(blocks => {
-			return { blocks };
+		return this.fetch(`blockpage.json`).then(r => r.json()).then(renderBlocks => {
+			return { renderBlocks };
 		});
 	}
 </script>
 
 <script>
-	export let blocks = [];
-	export let loadedBlockTypes = [];
-	let blocksToRender = [];
-	let uniqueBlocks = blocks.map(block => block.type)
-	uniqueBlocks = new Set(uniqueBlocks);
-	uniqueBlocks = [...uniqueBlocks];
 
-	uniqueBlocks.forEach(block => {
-		if(block === 'Slider') {
-			import('../../components/blocks/Slider.svelte').then(res => loadedBlockTypes = [...loadedBlockTypes, res.default])
-		}
-		if(block === 'Grid') {
-    	import('../../components/blocks/Grid.svelte').then(res => loadedBlockTypes = [...loadedBlockTypes, res.default])
-		}
-	});																								
-
-	$: blocksToRender = blocks.filter(block => loadedBlockTypes.some(vendor => {
-			return  vendor.name === block.type
-		}));
+	import blocks from '../../components/blocks/';
+	export let renderBlocks = [];
 
 </script>
 <style>
@@ -48,9 +32,9 @@
 </svelte:head>
 
 <div class="content">
-		{#each blocksToRender as block, i}
+		{#each renderBlocks as block, i}
 				<div class="fluid-row">
-					<svelte:component this={loadedBlockTypes.find(type => type.name === block.type)} guid={block.id} />
+					<svelte:component this={blocks[block.type]} guid={block.id} />
 				</div>
 		{/each}
 	<div class="content-row">

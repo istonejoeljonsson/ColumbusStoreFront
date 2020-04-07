@@ -1,3 +1,7 @@
+<script>
+  export let guid = null;
+</script>
+
 <style>
 
   figure{
@@ -10,7 +14,8 @@
 
 </style>
 
-<figure>
-  <img src="https://placekitten.com/1440/500" alt="Kitty" />
-</figure>
-
+{#if guid !== null}
+  <figure>
+    <img src="https://placekitten.com/1440/500" alt="Kitty" />
+  </figure>
+{/if}

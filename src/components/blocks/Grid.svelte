@@ -1,3 +1,7 @@
+<script>
+  export let guid = null;
+</script>
+
 <style>
  .grid-main{
    @apply grid grid-cols-2 gap-4;
@@ -20,8 +24,7 @@
  }
 
 </style>
-
-
+{#if guid !== null}
   <div class="grid-main">
     <div class="grid-child"><img src="https://placekitten.com/450/550" alt="Kitty" /></div>
     <div class="grid-child"><img src="https://placekitten.com/450/550" alt="Kitty" /></div>
@@ -30,3 +33,4 @@
     <div class="grid-child"><img src="https://placekitten.com/450/550" alt="Kitty" /></div>
     <div class="grid-child"><img src="https://placekitten.com/450/550" alt="Kitty" /></div>
   </div>
+{/if}
